@@ -23,7 +23,6 @@ const Shop = () => {
         })
             .then(res => res.json())
             .then(details => {
-                console.log(details.data);
                 setProducts(details.data);
             })
             .finally(() => setLoading(false));
@@ -53,7 +52,7 @@ const Shop = () => {
                 </div>
                 :
                 <>
-                    <div className='col-8 p-0'>
+                    <div className='col-md-8 p-0'>
                         <Product
                             handleDecrement={handleDecrement}
                             handleIncrement={handleIncrement}
@@ -61,7 +60,7 @@ const Shop = () => {
                             products={products}
                         ></Product>
                     </div>
-                    <div className='col-4 p-0'>
+                    <div className='col-md-4 p-0'>
                         <Cart qty={qty} handleAddToCart={handleAddToCart} products={products}></Cart>
                     </div>
                 </>}

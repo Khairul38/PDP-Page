@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Product = (props) => {
-    console.log(props);
     const { name, description, sku, price, quantity, images } = props.products;
 
     return (
